@@ -1,4 +1,4 @@
-import { Sparkles, Calendar, BarChart3, Globe, Wand2, Users } from "lucide-react";
+import { Sparkles, Calendar, BarChart3, Globe, Wand2, Users, Palette, Building2 } from "lucide-react";
 
 const features = [
   {
@@ -30,6 +30,16 @@ const features = [
     icon: Users,
     title: "Team Collaboration",
     description: "Approval workflows, role-based access, and shared content calendars for your team.",
+  },
+  {
+    icon: Palette,
+    title: "Creative Studio",
+    description: "Design stunning visuals, edit videos, and craft scroll-stopping creatives — all in one powerful studio.",
+  },
+  {
+    icon: Building2,
+    title: "Multi-Brand Workspaces",
+    description: "Manage multiple brands from a single dashboard with isolated content, assets, and team permissions.",
   },
 ];
 
