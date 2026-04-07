@@ -1,4 +1,4 @@
-import { Sparkles, Calendar, BarChart3, Globe, Wand2, Users } from "lucide-react";
+import { Sparkles, Calendar, BarChart3, Globe, Wand2, Users, Palette, Building2 } from "lucide-react";
 
 const features = [
   {
