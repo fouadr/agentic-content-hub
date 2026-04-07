@@ -31,6 +31,16 @@ const features = [
     title: "Team Collaboration",
     description: "Approval workflows, role-based access, and shared content calendars for your team.",
   },
+  {
+    icon: Palette,
+    title: "Creative Studio",
+    description: "Design stunning visuals, edit videos, and craft scroll-stopping creatives — all in one powerful studio.",
+  },
+  {
+    icon: Building2,
+    title: "Multi-Brand Workspaces",
+    description: "Manage multiple brands from a single dashboard with isolated content, assets, and team permissions.",
+  },
 ];
 
 const FeaturesSection = () => {
