@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="w-7 h-7 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="text-foreground">ContentAI</span>
+              <span className="text-foreground">BRANDSBAKERY</span>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               AI-powered content creation and management for modern creators and businesses.
@@ -36,7 +36,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} ContentAI. All rights reserved.
+          © {new Date().getFullYear()} BRANDSBAKERY. All rights reserved.
         </div>
       </div>
     </footer>
