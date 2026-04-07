@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "$0",
+    price: "€0",
     period: "/month",
     description: "Perfect for individuals getting started",
     features: ["5 AI-generated posts/week", "1 social account", "Basic analytics", "Community support"],
@@ -13,7 +13,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$29",
+    price: "€29",
     period: "/month",
     description: "For creators & small businesses",
     features: [
@@ -29,7 +29,7 @@ const plans = [
   },
   {
     name: "Enterprise",
-    price: "$99",
+    price: "€99",
     period: "/month",
     description: "For teams and agencies",
     features: [
