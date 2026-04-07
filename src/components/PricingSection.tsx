@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Minus, Plus } from "lucide-react";
 
 const plans = [
   {
@@ -10,6 +11,10 @@ const plans = [
     features: ["5 AI-generated posts/week", "1 social account", "Basic analytics", "Community support"],
     cta: "Start Free",
     popular: false,
+    addons: [
+      { label: "Extra Social Channels", price: 9, unit: "/month" },
+      { label: "Extra Credits", price: 5, unit: "/month" },
+    ],
   },
   {
     name: "Pro",
@@ -26,6 +31,11 @@ const plans = [
     ],
     cta: "Get Started",
     popular: true,
+    addons: [
+      { label: "Extra Social Channels", price: 19, unit: "/month" },
+      { label: "Extra Credits", price: 15, unit: "/month" },
+      { label: "API Access", price: 29, unit: "/month" },
+    ],
   },
   {
     name: "Enterprise",
@@ -42,8 +52,42 @@ const plans = [
     ],
     cta: "Contact Sales",
     popular: false,
+    addons: [
+      { label: "Extra Social Channels", price: 39, unit: "/month" },
+      { label: "Extra Credits", price: 29, unit: "/month" },
+      { label: "Dedicated Server", price: 99, unit: "/month" },
+    ],
   },
 ];
+
+const AddonRow = ({ label, price, unit }: { label: string; price: number; unit: string }) => {
+  const [qty, setQty] = useState(0);
+  return (
+    <div className="flex items-center justify-between gap-2">
+      <div className="text-xs text-muted-foreground leading-tight">
+        {label}
+        <br />
+        <span className="text-foreground font-medium">€{price}{unit}</span>
+      </div>
+      <div className="flex items-center gap-1 border border-border rounded-lg px-1 py-0.5">
+        <button
+          onClick={() => setQty(Math.max(0, qty - 1))}
+          disabled={qty === 0}
+          className="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors"
+        >
+          <Minus className="w-3 h-3" />
+        </button>
+        <span className="w-6 text-center text-sm font-medium text-foreground">{qty}</span>
+        <button
+          onClick={() => setQty(qty + 1)}
+          className="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+        >
+          <Plus className="w-3 h-3" />
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const PricingSection = () => {
   return (
@@ -89,6 +133,16 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Add-ons */}
+              <div className="mt-6 pt-6 border-t border-border">
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Add-ons</span>
+                <div className="mt-3 space-y-3">
+                  {plan.addons.map((addon) => (
+                    <AddonRow key={addon.label} {...addon} />
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
