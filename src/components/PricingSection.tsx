@@ -44,6 +44,7 @@ const plans = [
     features: [
       "Everything in Pro",
       "Unlimited accounts",
+      "Unlimited brands",
       "Team collaboration",
       "Custom AI agents",
       "API access",
