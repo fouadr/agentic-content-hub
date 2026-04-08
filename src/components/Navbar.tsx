@@ -35,7 +35,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="sm">Log In</Button>
-          <Button variant="default" size="sm">Get Started Free</Button>
+          <Button variant="default" size="sm">Get Started</Button>
         </div>
 
         <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
