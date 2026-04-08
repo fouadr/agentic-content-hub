@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: "Pro",
-    monthlyPrice: 29,
+    monthlyPrice: 150,
     description: "For creators & small businesses",
     features: [
       "Unlimited AI posts",
