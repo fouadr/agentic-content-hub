@@ -30,7 +30,7 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <Button variant="hero" size="lg" className="text-base px-8 py-6">
-            Start Creating for Free
+            Start Creating
             <ArrowRight className="w-5 h-5 ml-1" />
           </Button>
           <Button variant="heroOutline" size="lg" className="text-base px-8 py-6">
