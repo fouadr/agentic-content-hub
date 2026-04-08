@@ -38,7 +38,7 @@ const plans = [
   },
   {
     name: "Enterprise",
-    monthlyPrice: 99,
+    monthlyPrice: 2500,
     description: "For teams and agencies",
     features: [
       "Everything in Pro",
