@@ -7,7 +7,7 @@ const plans = [
     name: "Starter",
     monthlyPrice: 25,
     description: "Perfect for individuals getting started",
-    features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support"],
+    features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)"],
     cta: "Get Started",
     popular: false,
     addons: [
