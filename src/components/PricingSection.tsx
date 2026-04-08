@@ -5,7 +5,7 @@ import { Check, Minus, Plus } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    monthlyPrice: 0,
+    monthlyPrice: 25,
     description: "Perfect for individuals getting started",
     features: ["5 AI-generated posts/week", "1 social account", "Basic analytics", "Community support"],
     cta: "Start Free",
