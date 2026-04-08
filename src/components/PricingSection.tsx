@@ -22,6 +22,7 @@ const plans = [
     features: [
       "Unlimited AI posts",
       "10 social accounts",
+      "Up to 10 brands",
       "Advanced analytics",
       "Smart scheduling",
       "Brand voice training",
