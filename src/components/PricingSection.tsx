@@ -47,7 +47,6 @@ const plans = [
       "Custom AI agents",
       "API access",
       "Dedicated account manager",
-      "API pass (extra cost)",
     ],
     cta: "Contact Sales",
     popular: false,
