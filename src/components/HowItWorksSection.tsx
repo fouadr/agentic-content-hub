@@ -6,7 +6,7 @@ const steps = [
   },
   {
     step: "02",
-    title: "AI Creates Content",
+    title: "AI Agents Create Your Campaign",
     description: "Our agents research trends, generate copy and visuals, and prepare posts tailored to each platform.",
   },
   {
