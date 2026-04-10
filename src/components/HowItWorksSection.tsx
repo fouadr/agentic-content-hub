@@ -2,7 +2,7 @@ const steps = [
   {
     step: "01",
     title: "Set Up Your Brand Workspace",
-    description: "Link your social accounts and tell our AI about your brand, audience, and goals.",
+    description: "Create your brand workspace, upload your brand guidelines, and tell our AI agents about your audience, tone, and goals. Everything stays in your private knowledge base.",
   },
   {
     step: "02",
