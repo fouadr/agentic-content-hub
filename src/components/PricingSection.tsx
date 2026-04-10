@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Minus, Plus } from "lucide-react";
+import ContactSalesModal from "@/components/ContactSalesModal";
 
 const plans = [
   {
@@ -111,9 +112,11 @@ const AddonRow = ({
 const PricingCard = ({
   plan,
   isAnnual,
+  onContactSales,
 }: {
   plan: (typeof plans)[number];
   isAnnual: boolean;
+  onContactSales?: () => void;
 }) => {
   const [addonQtys, setAddonQtys] = useState<number[]>(
     () => plan.addons.map(() => 0)
@@ -157,7 +160,11 @@ const PricingCard = ({
         </p>
       )}
       {(!isAnnual || plan.monthlyPrice === 0) && <div className="mb-6" />}
-      <Button variant={plan.popular ? "default" : "outline"} className="w-full mb-8">
+      <Button
+        variant={plan.popular ? "default" : "outline"}
+        className="w-full mb-8"
+        onClick={plan.cta === "Contact Sales" ? onContactSales : undefined}
+      >
         {plan.cta}
       </Button>
       <ul className="space-y-3">
@@ -196,6 +203,7 @@ const PricingCard = ({
 
 const PricingSection = () => {
   const [isAnnual, setIsAnnual] = useState(false);
+  const [contactSalesOpen, setContactSalesOpen] = useState(false);
 
   return (
     <section id="pricing" className="py-24 bg-background">
@@ -247,10 +255,17 @@ const PricingSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan) => (
-            <PricingCard key={plan.name} plan={plan} isAnnual={isAnnual} />
+            <PricingCard
+              key={plan.name}
+              plan={plan}
+              isAnnual={isAnnual}
+              onContactSales={() => setContactSalesOpen(true)}
+            />
           ))}
         </div>
       </div>
+
+      <ContactSalesModal open={contactSalesOpen} onOpenChange={setContactSalesOpen} />
     </section>
   );
 };
