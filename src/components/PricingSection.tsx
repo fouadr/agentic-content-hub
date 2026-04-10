@@ -164,6 +164,8 @@ const PricingCard = ({
         {plan.features.map((f) => (
           <li key={f} className="flex items-center gap-3 text-sm text-muted-foreground">
             <Check className="w-4 h-4 text-primary flex-shrink-0" />
+            {f === "Up to 10 brands" ? <span className="font-bold">{f}</span> : f}
+            <Check className="w-4 h-4 text-primary flex-shrink-0" />
             {f}
           </li>
         ))}
