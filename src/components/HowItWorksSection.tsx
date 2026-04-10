@@ -17,7 +17,7 @@ const steps = [
   {
     step: "04",
     title: "Publish & Grow",
-    description: "Content goes live at optimal times. Track performance and let AI optimize future posts.",
+    description: "Approved content is scheduled and published at optimal times across your platforms. Track performance, run A/B variants, and let the AI refine future campaigns based on real results.",
   },
 ];
 
