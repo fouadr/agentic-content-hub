@@ -7,7 +7,7 @@ const steps = [
   {
     step: "02",
     title: "AI Agents Create Your Campaign",
-    description: "Our agents research trends, generate copy and visuals, and prepare posts tailored to each platform.",
+    description: "Seven specialized AI agents collaborate — researching trends, writing copy, directing creatives, checking brand compliance, and preparing platform-specific content in minutes.",
   },
   {
     step: "03",
