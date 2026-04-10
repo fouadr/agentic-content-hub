@@ -12,7 +12,7 @@ const steps = [
   {
     step: "03",
     title: "Review & Approve",
-    description: "Edit, tweak, or approve generated content. The AI learns from your preferences over time.",
+    description: "Your campaign arrives ready for review. Edit, approve, or reject individual elements. The agency can collaborate with clients directly inside the platform before anything goes live.",
   },
   {
     step: "04",
