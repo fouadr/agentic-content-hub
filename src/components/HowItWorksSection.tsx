@@ -1,7 +1,7 @@
 const steps = [
   {
     step: "01",
-    title: "Connect Your Brands",
+    title: "Set Up Your Brand Workspace",
     description: "Link your social accounts and tell our AI about your brand, audience, and goals.",
   },
   {
