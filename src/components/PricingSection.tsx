@@ -8,6 +8,7 @@ const plans = [
     name: "Starter",
     monthlyPrice: 25,
     description: "Perfect for individuals getting started",
+    priceDescription: "",
     features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)"],
     cta: "Get Started",
     popular: false,
@@ -20,6 +21,7 @@ const plans = [
     name: "Growth",
     monthlyPrice: 150,
     description: "For creators & small businesses",
+    priceDescription: "",
     features: [
       "Unlimited AI posts",
       "10 social accounts",
@@ -42,6 +44,7 @@ const plans = [
     name: "Scale",
     monthlyPrice: 2500,
     description: "For teams and agencies. Incl. White label",
+    priceDescription: "",
     features: [
       "Everything in Pro",
       "Unlimited accounts",
@@ -165,11 +168,15 @@ const PricingCard = ({
         )}
       </div>
       {isAnnual && plan.monthlyPrice > 0 && (
-        <p className="text-xs text-primary mb-4">
+        <p className="text-xs text-primary mb-1">
           Save 20% — billed €{totalPrice * 12}/year
         </p>
       )}
-      {(!isAnnual || plan.monthlyPrice === 0) && <div className="mb-6" />}
+      {plan.priceDescription && (
+        <p className="text-xs text-muted-foreground mt-1 mb-4">{plan.priceDescription}</p>
+      )}
+      {(!plan.priceDescription && (!isAnnual || plan.monthlyPrice === 0)) && <div className="mb-6" />}
+      {(!plan.priceDescription && isAnnual && plan.monthlyPrice > 0) && <div className="mb-3" />}
       <Button
         variant={plan.popular ? "default" : "outline"}
         className="w-full mb-8"
