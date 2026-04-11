@@ -19,7 +19,7 @@ const plans = [
   {
     name: "Growth",
     monthlyPrice: 150,
-    description: "For creators & small businesses",
+    description: "For creators, small businesses and small agencies",
     features: [
       "Unlimited AI posts",
       "10 social accounts",
