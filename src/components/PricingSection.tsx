@@ -152,7 +152,11 @@ const PricingCard = ({
       <p className="text-muted-foreground text-sm mt-1">{plan.description}</p>
       <div className="mt-6 mb-1">
         <span className="text-4xl font-bold text-foreground">€{totalPrice}</span>
-        <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+        {plan.priceSuffix !== undefined ? (
+          <span className="text-muted-foreground">{plan.priceSuffix}</span>
+        ) : (
+          <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+        )}
       </div>
       {isAnnual && plan.monthlyPrice > 0 && (
         <p className="text-xs text-primary mb-4">
