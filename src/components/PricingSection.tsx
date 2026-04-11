@@ -53,7 +53,8 @@ const plans = [
     ],
     cta: "Contact Sales",
     popular: false,
-    priceSuffix: ".",
+    priceSuffix: "",
+    priceLabel: "Contact Sales",
     addons: [
       { label: "Extra Social Channels", monthlyPrice: 39 },
       { label: "Extra Credits", monthlyPrice: 29 },
