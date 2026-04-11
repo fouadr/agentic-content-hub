@@ -53,7 +53,8 @@ const plans = [
     ],
     cta: "Contact Sales",
     popular: false,
-    priceSuffix: ".",
+    priceSuffix: "",
+    priceLabel: "Contact Sales",
     addons: [
       { label: "Extra Social Channels", monthlyPrice: 39 },
       { label: "Extra Credits", monthlyPrice: 29 },
@@ -152,11 +153,15 @@ const PricingCard = ({
       <h3 className="text-xl font-semibold text-foreground">{plan.name}</h3>
       <p className="text-muted-foreground text-sm mt-1">{plan.description}</p>
       <div className="mt-6 mb-1">
-        <span className="text-4xl font-bold text-foreground">€{totalPrice}</span>
-        {plan.priceSuffix !== undefined ? (
-          <span className="text-muted-foreground">{plan.priceSuffix}</span>
-        ) : (
-          <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+        <span className="text-4xl font-bold text-foreground">
+          {plan.priceLabel ? plan.priceLabel : `€${totalPrice}`}
+        </span>
+        {!plan.priceLabel && (
+          plan.priceSuffix !== undefined ? (
+            <span className="text-muted-foreground">{plan.priceSuffix}</span>
+          ) : (
+            <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+          )
         )}
       </div>
       {isAnnual && plan.monthlyPrice > 0 && (
