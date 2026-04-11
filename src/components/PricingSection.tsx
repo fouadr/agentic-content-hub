@@ -39,7 +39,7 @@ const plans = [
     ],
   },
   {
-    name: "Scale (incl White-Label)",
+    name: "Scale",
     monthlyPrice: 2500,
     description: "For teams and agencies",
     features: [
