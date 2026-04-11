@@ -1,13 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" width={1920} height={1080} />
+        <img src="https://assets.meku.dev/attachments/4ffea3ce-d729-4ee6-8391-50dfdc5388b0/BRANDSBAKERY/src/assets/hero-bg.jpg" alt="" className="w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-hero opacity-80" />
       </div>
 
