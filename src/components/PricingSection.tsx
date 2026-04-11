@@ -17,7 +17,7 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
+    name: "Growth",
     monthlyPrice: 150,
     description: "For creators & small businesses",
     features: [
