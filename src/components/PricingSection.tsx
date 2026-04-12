@@ -44,7 +44,7 @@ const plans = [
     name: "Scale",
     monthlyPrice: 2500,
     description: "For teams and agencies. Incl. White label",
-    priceDescription: "",
+    priceDescription: "Unlimited workspaces, 5,000 Agency Credits included",
     features: [
       "Everything in Pro",
       "Unlimited accounts",
