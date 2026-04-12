@@ -9,7 +9,7 @@ const plans = [
     monthlyPrice: 25,
     description: "Perfect for individuals getting started",
     priceDescription: "1 workspace, 500 Agency Credits included",
-    features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)"],
+    features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
     cta: "Get Started",
     popular: false,
     addons: [
