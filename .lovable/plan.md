@@ -1,5 +1,3 @@
-
-
 ## Plan: Rename "ContentAI" to "BRANDSBAKERY"
 
 Replace all instances of "ContentAI" across the codebase:
@@ -12,4 +10,3 @@ Replace all instances of "ContentAI" across the codebase:
 6. **Any other references** in HeroSection or other components
 
 This is a straightforward find-and-replace across ~4-5 files.
-

@@ -8,7 +8,8 @@ const plans = [
     name: "Starter",
     monthlyPrice: 25,
     description: "Perfect for individuals getting started",
-    features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)"],
+    priceDescription: "1 workspace, 500 Agency Credits included",
+    features: ["500 visual renders", "2 social accounts", "15 min AI avatar video", "30 min AI voiceover", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
     cta: "Get Started",
     popular: false,
     addons: [
@@ -17,9 +18,10 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
+    name: "Growth",
     monthlyPrice: 150,
     description: "For creators & small businesses",
+    priceDescription: "10 workspaces, 2,000 Agency Credits included",
     features: [
       "Unlimited AI posts",
       "10 social accounts",
@@ -39,9 +41,10 @@ const plans = [
     ],
   },
   {
-    name: "Enterprise",
+    name: "Scale",
     monthlyPrice: 2500,
-    description: "For teams and agencies",
+    description: "For teams and agencies. Incl. White label",
+    priceDescription: "Unlimited workspaces, 5,000 Agency Credits included",
     features: [
       "Everything in Pro",
       "Unlimited accounts",
@@ -53,6 +56,8 @@ const plans = [
     ],
     cta: "Contact Sales",
     popular: false,
+    priceSuffix: "",
+    priceLabel: "Contact Sales",
     addons: [
       { label: "Extra Social Channels", monthlyPrice: 39 },
       { label: "Extra Credits", monthlyPrice: 29 },
@@ -151,15 +156,27 @@ const PricingCard = ({
       <h3 className="text-xl font-semibold text-foreground">{plan.name}</h3>
       <p className="text-muted-foreground text-sm mt-1">{plan.description}</p>
       <div className="mt-6 mb-1">
-        <span className="text-4xl font-bold text-foreground">€{totalPrice}</span>
-        <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+        <span className="text-4xl font-bold text-foreground">
+          {plan.priceLabel ? plan.priceLabel : `€${totalPrice}`}
+        </span>
+        {!plan.priceLabel && (
+          plan.priceSuffix !== undefined ? (
+            <span className="text-muted-foreground">{plan.priceSuffix}</span>
+          ) : (
+            <span className="text-muted-foreground">/{isAnnual ? "mo" : "month"}</span>
+          )
+        )}
       </div>
       {isAnnual && plan.monthlyPrice > 0 && (
-        <p className="text-xs text-primary mb-4">
+        <p className="text-xs text-primary mb-1">
           Save 20% — billed €{totalPrice * 12}/year
         </p>
       )}
-      {(!isAnnual || plan.monthlyPrice === 0) && <div className="mb-6" />}
+      {plan.priceDescription && (
+        <p className="text-xs text-muted-foreground mt-1 mb-4">{plan.priceDescription}</p>
+      )}
+      {(!plan.priceDescription && (!isAnnual || plan.monthlyPrice === 0)) && <div className="mb-6" />}
+      {(!plan.priceDescription && isAnnual && plan.monthlyPrice > 0) && <div className="mb-3" />}
       <Button
         variant={plan.popular ? "default" : "outline"}
         className="w-full mb-8"
