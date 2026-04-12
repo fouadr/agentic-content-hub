@@ -7,7 +7,7 @@ const plans = [
   {
     name: "Starter",
     monthlyPrice: 99,
-    description: "Perfect for proffesionals getting started",
+    description: "Perfect for professionals getting started",
     priceDescription: "4 workspace, 500 Agency Credits included",
     features: ["500 visual renders", "2 social accounts", "Brand voice training(RAG)", "Up to 4 brands", "15 min AI avatar video", "30 min AI voiceover", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
     cta: "Get Started",
