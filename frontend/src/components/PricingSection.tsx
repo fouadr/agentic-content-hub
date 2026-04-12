@@ -6,10 +6,10 @@ import ContactSalesModal from "@/components/ContactSalesModal";
 const plans = [
   {
     name: "Starter",
-    monthlyPrice: 25,
-    description: "Perfect for individuals getting started",
-    priceDescription: "1 workspace, 500 Agency Credits included",
-    features: ["500 visual renders", "2 social accounts", "15 min AI avatar video", "30 min AI voiceover", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
+    monthlyPrice: 99,
+    description: "Perfect for proffesionals getting started",
+    priceDescription: "4 workspace, 500 Agency Credits included",
+    features: ["500 visual renders", "2 social accounts", "Brand voice training(RAG)", "Up to 4 brands", "15 min AI avatar video", "30 min AI voiceover", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
     cta: "Get Started",
     popular: false,
     addons: [
@@ -19,16 +19,17 @@ const plans = [
   },
   {
     name: "Growth",
-    monthlyPrice: 150,
+    monthlyPrice: 249,
     description: "For creators & small businesses",
     priceDescription: "10 workspaces, 2,000 Agency Credits included",
     features: [
+      "Everything in Starter",
+      "Avatar IV video unlocked",
       "Unlimited AI posts",
       "10 social accounts",
       "Up to 10 brands",
       "Advanced analytics",
       "Smart scheduling",
-      "Brand voice training",
       "Priority support",
       "API pass (extra cost)",
     ],
@@ -42,7 +43,7 @@ const plans = [
   },
   {
     name: "Scale",
-    monthlyPrice: 2500,
+    monthlyPrice: Contact Sales,
     description: "For teams and agencies. Incl. White label",
     priceDescription: "Unlimited workspaces, 5,000 Agency Credits included",
     features: [
