@@ -1,45 +1,45 @@
-import { Sparkles, Calendar, BarChart3, Globe, Wand2, Users, Palette, Building2 } from "lucide-react";
+import { Sparkles, Globe, Brain, Clapperboard, ShieldCheck, LayoutDashboard, BarChart3, CalendarClock } from "lucide-react";
 
 const features = [
   {
     icon: Sparkles,
-    title: "AI Content Generation",
-    description: "Generate engaging posts, captions, and visuals tailored to your brand voice in seconds.",
-  },
-  {
-    icon: Calendar,
-    title: "Smart Scheduling",
-    description: "AI picks the best times to post based on audience behavior and engagement data.",
-  },
-  {
-    icon: BarChart3,
-    title: "Performance Analytics",
-    description: "Deep insights into what's working with actionable recommendations to boost growth.",
+    title: "AI Campaign Engine",
+    description: "Seven specialized AI agents — strategy, data analysis, copywriting, creative direction, compliance, operations, and reporting — generate publish-ready campaigns in under 90 seconds.",
   },
   {
     icon: Globe,
     title: "Multi-Platform Publishing",
-    description: "Create once, publish everywhere — Instagram, TikTok, LinkedIn, X, Facebook & more.",
+    description: "Publish directly to Instagram and LinkedIn from one dashboard. Schedule posts for optimal timing or publish immediately after review.",
   },
   {
-    icon: Wand2,
-    title: "Brand Voice AI",
-    description: "Train the AI on your unique brand tone and style for consistently on-brand content.",
+    icon: Brain,
+    title: "Brand Intelligence",
+    description: "Upload brand guidelines and reference documents. AI indexes everything and generates on-brand content using retrieval-augmented generation — every time.",
   },
   {
-    icon: Users,
-    title: "Team Collaboration",
-    description: "Approval workflows, role-based access, and shared content calendars for your team.",
-  },
-  {
-    icon: Palette,
+    icon: Clapperboard,
     title: "Creative Studio",
-    description: "Design stunning visuals, edit videos, and craft scroll-stopping creatives — all in one powerful studio.",
+    description: "Design branded visuals with smart cropping and overlay templates, or generate AI avatar videos with text-to-speech — all from the campaign review page.",
   },
   {
-    icon: Building2,
+    icon: ShieldCheck,
+    title: "Review, Approve & Comply",
+    description: "Every campaign passes four automated guardrails — brand safety, budget caps, legal compliance, and CTA quality — before landing in your approval queue.",
+  },
+  {
+    icon: LayoutDashboard,
     title: "Multi-Brand Workspaces",
-    description: "Manage multiple brands from a single dashboard with isolated content, assets, and team permissions.",
+    description: "Manage multiple brands and clients from a single platform. Each workspace gets its own brand profile, content library, social accounts, and team permissions.",
+  },
+  {
+    icon: BarChart3,
+    title: "Automated Reporting",
+    description: "Nightly analytics sync pulls real performance data from Meta and LinkedIn back into your dashboard. No more manual spreadsheet exports.",
+  },
+  {
+    icon: CalendarClock,
+    title: "Campaign Series",
+    description: "Build multi-step drip campaigns with automated scheduling. Each step generates and publishes on your timeline — set it and let the AI handle the rest.",
   },
 ];
 
@@ -50,13 +50,12 @@ const FeaturesSection = () => {
         <div className="text-center mb-16">
           <span className="text-sm font-semibold text-primary tracking-wider uppercase">Features</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-3 text-foreground">
-            Everything You Need to <span className="text-gradient">Win on Social</span>
+            Everything You Need to <span className="text-gradient">Run Campaigns on Autopilot</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Our AI agents handle the entire content lifecycle — from ideation to publishing to optimization.
+            From strategy to publishing to reporting — AI agents handle the entire campaign lifecycle so you can focus on growing your business.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <div
