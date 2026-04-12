@@ -21,7 +21,7 @@ const plans = [
     name: "Growth",
     monthlyPrice: 150,
     description: "For creators & small businesses",
-    priceDescription: "",
+    priceDescription: "10 workspaces, 2,000 Agency Credits included",
     features: [
       "Unlimited AI posts",
       "10 social accounts",
