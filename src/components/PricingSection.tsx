@@ -8,7 +8,7 @@ const plans = [
     name: "Starter",
     monthlyPrice: 25,
     description: "Perfect for individuals getting started",
-    priceDescription: "",
+    priceDescription: "1 workspace, 500 Agency Credits included",
     features: ["5 AI-generated posts/week", "2 social accounts", "Basic analytics", "Community support", "API pass (extra cost)"],
     cta: "Get Started",
     popular: false,
