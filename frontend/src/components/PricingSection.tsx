@@ -11,6 +11,7 @@ const plans = [
     priceDescription: "4 workspace, 500 Agency Credits included",
     features: ["500 visual renders", "2 social accounts", "Brand voice training(RAG)", "Up to 4 brands", "15 min AI avatar video", "30 min AI voiceover", "API pass (extra cost)", "7-agent AI campaign pipeline", "Campaign review + approval", "Competitor analysis"],
     cta: "Get Started",
+    ctaHref: "https://app.brandsbakery.com/sign-up",
     popular: false,
     addons: [
       { label: "Extra Social Channels", monthlyPrice: 9 },
@@ -34,6 +35,7 @@ const plans = [
       "API pass (extra cost)",
     ],
     cta: "Get Started",
+    ctaHref: "https://app.brandsbakery.com/sign-up",
     popular: true,
     addons: [
       { label: "Extra Social Channels", monthlyPrice: 19 },
@@ -178,13 +180,19 @@ const PricingCard = ({
       )}
       {(!plan.priceDescription && (!isAnnual || plan.monthlyPrice === 0)) && <div className="mb-6" />}
       {(!plan.priceDescription && isAnnual && plan.monthlyPrice > 0) && <div className="mb-3" />}
-      <Button
-        variant={plan.popular ? "default" : "outline"}
-        className="w-full mb-8"
-        onClick={plan.cta === "Contact Sales" ? onContactSales : undefined}
-      >
-        {plan.cta}
-      </Button>
+      {plan.ctaHref ? (
+        <Button variant={plan.popular ? "default" : "outline"} className="w-full mb-8" asChild>
+          <a href={plan.ctaHref}>{plan.cta}</a>
+        </Button>
+      ) : (
+        <Button
+          variant={plan.popular ? "default" : "outline"}
+          className="w-full mb-8"
+          onClick={plan.cta === "Contact Sales" ? onContactSales : undefined}
+        >
+          {plan.cta}
+        </Button>
+      )}
       <ul className="space-y-3">
         {plan.features.map((f) => (
           <li key={f} className="flex items-center gap-3 text-sm text-muted-foreground">
